@@ -59,6 +59,10 @@
     <Compile Include="Assets\Tutorial Flappy Bird\Scripts\Bird.cs" />
     <Compile Include="Assets\Tutorial Flappy Bird\Scripts\ScrollPosition.cs" />
     <Compile Include="Assets\Tutorial Flappy Bird\Scripts\TimeController.cs" />
+    <Compile Include="Assets\GameManager.cs" />
+    <Compile Include="Assets\Tutorial Flappy Bird\Scripts\Reposition.cs" />
+    <Compile Include="Assets\Column.cs" />
+    <Compile Include="Assets\ColumnManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

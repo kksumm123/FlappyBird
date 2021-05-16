@@ -11,6 +11,8 @@ public class Bird : MonoBehaviour
     private void Start()
     {
         originalPos = transform.position;
+
+        GameManager.instance.ShowGameOver(false);
     }
     void Update()
     {
@@ -21,9 +23,18 @@ public class Bird : MonoBehaviour
         {
             //transform.position = originalPos;
 
-            var rd = GetComponent<Rigidbody>();
+            var rd = GetComponent<Rigidbody2D>();
             rd.velocity = Vector3.zero;
-            rd.AddForce(0, force, 0);
+            rd.AddForce(new Vector2(0, force));
         }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log("Ãæµ¹ " + collision.transform.name);
+        enabled = false;
+        GameManager.instance.ShowGameOver(true);
+
+        ScrollPosition.Items.ForEach(x => x.enabled = false);
     }
 }
