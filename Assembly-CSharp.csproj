@@ -56,15 +56,10 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Flappy Bird Style\Scripts\Column.cs" />
-    <Compile Include="Assets\Flappy Bird Style\Scripts\ColumnPool.cs" />
-    <Compile Include="Assets\Flappy Bird Style\Scripts\Bird.cs" />
-    <Compile Include="Assets\Flappy Bird Style\Scripts\RepeatingBackground.cs" />
-    <Compile Include="Assets\Flappy Bird Style\Scripts\GameControl.cs" />
-    <Compile Include="Assets\Flappy Bird Style\Scripts\ScrollingObject.cs" />
+    <Compile Include="Assets\Tutorial Flappy Bird\Scripts\ScrollPosition.cs" />
+    <Compile Include="Assets\Tutorial Flappy Bird\Scripts\Relocation.cs" />
   </ItemGroup>
   <ItemGroup>
-     <None Include="Assets\Flappy Bird Style\_ReadMe.txt" />
     <Reference Include="UnityEngine">
       <HintPath>D:\Program Files\Unity\2020.3.5f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
