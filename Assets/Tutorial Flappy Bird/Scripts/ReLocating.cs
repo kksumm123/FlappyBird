@@ -1,20 +1,20 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class ReLocating : MonoBehaviour
 {
-    // ÀÌ °ªº¸´Ù À§Ä¡X°¡ ÀÛÀ¸¸é ¿À¸¥ÂÊÀ¸·Î º¸³»ÀÚ
-    public float minX = -14;
-    [SerializeField] // privateÀ¸·Î ÀÎ½ºÆåÅÍ ³ëÃâ
+    // ì´ ê°’ë³´ë‹¤ ìœ„ì¹˜Xê°€ ì‘ìœ¼ë©´ ì˜¤ë¥¸ìª½ìœ¼ë¡œ ë³´ë‚´ì
+    public float minX = -20.48f;
+    [SerializeField] // privateìœ¼ë¡œ ì¸ìŠ¤í™í„° ë…¸ì¶œ
     private float showinspector = 123;
     void Update()
     {
         if (minX > transform.position.x)
         {
-            // ¿À¸¥ÂÊÀ¸·Î °¡·Î Å©±â * 2 ¸¸Å­ º¸³»ÀÚ
-            // °¡·Î Å©±â = 20.48
-            transform.Translate(14f, 0, 0);
+            // ì˜¤ë¥¸ìª½ìœ¼ë¡œ ê°€ë¡œ í¬ê¸° * 2 ë§Œí¼ ë³´ë‚´ì
+            // ê°€ë¡œ í¬ê¸° = 20.48
+            transform.Translate(20.48f * 2, 0, 0);
         }
     }
 }
