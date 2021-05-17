@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Common\Editor\NGUITransformInspector.cs" />
+    <Compile Include="Assets\Scripts\Common\Editor\SpriteSaveToPng.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

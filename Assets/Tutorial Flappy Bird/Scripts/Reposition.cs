@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class Reposition : MonoBehaviour
 {
-    public float minX = -2;
+    public float minX;
+    public float width;
 
-    float width;
     private void Start()
     {
-        width = GetComponentInChildren<BoxCollider2D>().size.x;
+        var spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        width = spriteRenderer.sprite.bounds.size.x * transform.lossyScale.x;
+        minX = -width;
     }
 
     // Update is called once per frame

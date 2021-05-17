@@ -57,19 +57,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Tutorial Flappy Bird\Scripts\Bird.cs" />
-    <Compile Include="Assets\GameManager.cs" />
+    <Compile Include="Assets\Tutorial Flappy Bird\Scripts\GameManager.cs" />
     <Compile Include="Assets\Tutorial Flappy Bird\Scripts\ScrollPosition.cs" />
-    <Compile Include="Assets\Column.cs" />
-    <Compile Include="Assets\ColumnManager.cs" />
+    <Compile Include="Assets\Tutorial Flappy Bird\Scripts\Column.cs" />
+    <Compile Include="Assets\Tutorial Flappy Bird\Scripts\ColumnManager.cs" />
     <Compile Include="Assets\Tutorial Flappy Bird\Scripts\Reposition.cs" />
     <Compile Include="Assets\Scripts\Common\GOHelper.cs" />
     <Compile Include="Assets\Scripts\Common\MyExtension.cs" />
     <Compile Include="Assets\Scripts\Common\TimeController.cs" />
     <Compile Include="Assets\Scripts\Common\GODestroyer.cs" />
-    <Compile Include="Assets\GORotate.cs" />
+    <Compile Include="Assets\Scripts\Common\GORotate.cs" />
+    <Compile Include="Assets\Scripts\Common\ChangeTextureOffset.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\BayatGames\Free Platform Game Assets\Readme.txt" />
+     <None Include="Assets\Free Asset - 2D Handcrafted Art\Readme.txt" />
     <Reference Include="UnityEngine">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.5f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>

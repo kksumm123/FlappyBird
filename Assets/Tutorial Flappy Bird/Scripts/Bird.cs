@@ -33,7 +33,7 @@ public class Bird : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("충돌 " + collision.transform.name);
+        //Debug.Log("충돌 " + collision.transform.name);
         enabled = false; // Update 함수 반복을 멈춤.
         animator.Play("Die", 0, 0);
 
