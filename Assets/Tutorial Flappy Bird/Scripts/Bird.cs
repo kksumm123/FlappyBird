@@ -21,10 +21,8 @@ public class Bird : MonoBehaviour
         Physics.gravity = new Vector3(0, gravity, 0);
 
 
-        if(Input.GetKeyDown(KeyCode.Space))
+        if(Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space))
         {
-            //transform.position = originalPos;
-
             var rd = GetComponent<Rigidbody2D>();
             rd.velocity = Vector3.zero;
             rd.AddForce(new Vector2(0, force));
