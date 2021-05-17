@@ -5,9 +5,9 @@ using UnityEngine;
 public class ColumnManager : MonoBehaviour
 {
     public GameObject column;
-    // Start is called before the first frame update
 
-    public float spawnDelay = 1;
+    public float spawnDelay = 3;
+    public float spawnDelayRandom = 1;
     public float spawnX = 10f;
     public float spawnYmin = -1.62f;
     public float spawnYmax = 3.46f;
@@ -18,13 +18,7 @@ public class ColumnManager : MonoBehaviour
             // 기둥 스폰(생성).
             Instantiate(column, new Vector3(spawnX, Random.Range(spawnYmin, spawnYmax), 0), column.transform.rotation);
 
-            yield return new WaitForSeconds(spawnDelay);
+            yield return new WaitForSeconds(spawnDelay + Random.Range(-spawnDelayRandom, spawnDelayRandom));
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
