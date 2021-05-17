@@ -65,6 +65,7 @@
     <Compile Include="Assets\Scripts\Common\GOHelper.cs" />
     <Compile Include="Assets\Scripts\Common\MyExtension.cs" />
     <Compile Include="Assets\Scripts\Common\TimeController.cs" />
+    <Compile Include="Assets\Scripts\Common\GODestroyer.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
