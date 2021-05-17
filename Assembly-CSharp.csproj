@@ -66,8 +66,10 @@
     <Compile Include="Assets\Scripts\Common\MyExtension.cs" />
     <Compile Include="Assets\Scripts\Common\TimeController.cs" />
     <Compile Include="Assets\Scripts\Common\GODestroyer.cs" />
+    <Compile Include="Assets\GORotate.cs" />
   </ItemGroup>
   <ItemGroup>
+     <None Include="Assets\BayatGames\Free Platform Game Assets\Readme.txt" />
     <Reference Include="UnityEngine">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.5f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>

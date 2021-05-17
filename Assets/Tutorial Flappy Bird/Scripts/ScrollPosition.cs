@@ -8,13 +8,13 @@ public class ScrollPosition : MonoBehaviour
 
     private void Awake()
     {
-        Debug.Log(name + "积己凳");
+        //Debug.Log(name + "积己凳");
         Items.Add(this);
     }
 
     private void OnDestroy()
     {
-        Debug.Log(name + "昏力凳");
+        //Debug.Log(name + "昏力凳");
         Items.Remove(this);
     }
 
