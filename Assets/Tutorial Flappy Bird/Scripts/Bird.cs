@@ -11,19 +11,32 @@ public class Bird : MonoBehaviour
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        Flap();
     }
 
-    public float forceY = 400;
+    public float forceY = 300;
     void Update()
     {
         // 마우스 클릭, 스페이스바
         if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space))
         {
-            force.x = 0;
-            force.y = forceY;
-            rigidbody2D.AddForce(force);
-            animator.Play("Flap", 0, 0);
+            if (Time.time > 0.5f)
+            {
+                Flap();
+            }
         }
+    }
+
+    private void Flap()
+    {
+        //낙하중에 클릭시 조금만 띄워진다
+        //낙하중 운동힘을 멈추고나서 힘을 줘야 항상 일정하게 띄워진다
+        force.x = 0;
+        force.y = forceY;
+        //속도 벡터 zero
+        rigidbody2D.velocity = Vector2.zero;
+        rigidbody2D.AddForce(force);
+        animator.Play("Flap", 0, 0);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     // 새가 죽으면 게임 종료 UI표시
     public GameObject gameOverUI;
     public Text scoreUI;
+    public float scrollSpeedMult = 1;
     public void SetGameOver()
     {
         isGameOver = true;
