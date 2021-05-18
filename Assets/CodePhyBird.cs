@@ -16,9 +16,6 @@ public class CodePhyBird : Bird
     public float g_Acceleration = 0;
     private void Update()
     {
-        if (Time.deltaTime == 0)
-            return;
-
         //성능차이에 따른 fps에 
         // 물리적인 계산 등 성능에 따라 결과가 달라지므로
         // FixedUpdate사용하자
@@ -47,10 +44,12 @@ public class CodePhyBird : Bird
     }
     void GrivityAcceleration()
     {
+        if (Time.deltaTime == 0)
+            return;
 
         //중력에 의한 낙하 구현
         //중력가속도
-        g_Acceleration += gravity * Time.deltaTime;
+        g_Acceleration += gravity * Time.fixedDeltaTime;
 
         //중력가속도에 의한 y값 변경
         transform.Translate(0, g_Acceleration, 0);
