@@ -5,16 +5,23 @@ using UnityEngine;
 public class ReLocating : MonoBehaviour
 {
     // 이 값보다 위치X가 작으면 오른쪽으로 보내자
-    public float minX = -20.48f;
-    [SerializeField] // private으로 인스펙터 노출
-    private float showinspector = 123;
+    public float minX;
+    public float width;
+
+    private void Start()
+    {
+        var spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        width = spriteRenderer.sprite.bounds.size.x * transform.lossyScale.x;
+        //minX = -transform.position.x;
+    }
+
+    // Update is called once per frame
     void Update()
     {
-        if (minX > transform.position.x)
+        // 최저 위치보다 뒤로 갔다면 앞으로 이동시키기
+        if (transform.position.x < minX)
         {
-            // 오른쪽으로 가로 크기 * 2 만큼 보내자
-            // 가로 크기 = 20.48
-            transform.Translate(20.48f * 2, 0, 0);
+            transform.Translate(width * 2, 0, 0);
         }
     }
 }
