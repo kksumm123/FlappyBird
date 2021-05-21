@@ -11,7 +11,7 @@ public class Bird : MonoBehaviour
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        Flap();
+        //Flap();
     }
 
     public float forceY = 300;

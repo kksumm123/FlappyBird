@@ -12,8 +12,8 @@ public class CodePhyBird : Bird
         rigidbody2D.useFullKinematicContacts = true;
     }
 
-    public float gravity = -0.07f;
-    public float g_Acceleration = 0;
+    public float gravityAcceleration = -9.81f;
+    public float g_velocity = 0;
     private void Update()
     {
         //성능차이에 따른 fps에 
@@ -35,7 +35,7 @@ public class CodePhyBird : Bird
         base.forceY = 0.07f;
         //낙하중에 클릭시 조금만 띄워진다
         //낙하중 운동힘을 멈추고나서 힘을 줘야 항상 일정하게 띄워진다
-        g_Acceleration = forceY;
+        g_velocity = forceY;
         animator.Play("Flap", 0, 0);
     }
     private void FixedUpdate()
@@ -49,10 +49,16 @@ public class CodePhyBird : Bird
 
         //중력에 의한 낙하 구현
         //중력가속도
-        g_Acceleration += gravity * Time.fixedDeltaTime;
+        //g_velocity += gravityAcceleration * Time.fixedDeltaTime;
+        //g_velocity += (Mathf.Pow(gravityAcceleration * Time.fixedDeltaTime);
+
+        g_velocity += gravityAcceleration * Time.fixedDeltaTime;
+
+        float g_H = (g_velocity * Time.fixedDeltaTime)
+            + (0.5f * gravityAcceleration * Mathf.Pow(Time.fixedDeltaTime, 2));
 
         //중력가속도에 의한 y값 변경
-        transform.Translate(0, g_Acceleration, 0);
+        transform.Translate(0, g_H, 0);
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
