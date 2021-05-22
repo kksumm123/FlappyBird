@@ -19,7 +19,7 @@ public class ReLocating : MonoBehaviour
     void Update()
     {
         // 최저 위치보다 뒤로 갔다면 앞으로 이동시키기
-        if (transform.position.x < minX)
+        if (transform.position.x < -minX)
         {
             transform.Translate(width * 2, 0, 0);
         }
