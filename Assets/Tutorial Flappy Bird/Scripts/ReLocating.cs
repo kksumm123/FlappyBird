@@ -13,6 +13,7 @@ public class ReLocating : MonoBehaviour
         var spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         width = spriteRenderer.sprite.bounds.size.x * transform.lossyScale.x;
         //minX = -transform.position.x;
+        minX = width - transform.position.x;
     }
 
     // Update is called once per frame
@@ -21,7 +22,7 @@ public class ReLocating : MonoBehaviour
         // 최저 위치보다 뒤로 갔다면 앞으로 이동시키기
         if (transform.position.x < -minX)
         {
-            transform.Translate(width * 2, 0, 0);
+            transform.Translate(width, 0, 0);
         }
     }
 }
