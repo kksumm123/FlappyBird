@@ -34,7 +34,6 @@ public class GameManager : MonoBehaviour
         scoreUI.text = "Score : " + score;
     }
 
-    int count;
     private void Update()
     {
         

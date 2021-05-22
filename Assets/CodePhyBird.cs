@@ -51,14 +51,16 @@ public class CodePhyBird : Bird
         //중력가속도
         //g_velocity += gravityAcceleration * Time.fixedDeltaTime;
         //g_velocity += (Mathf.Pow(gravityAcceleration * Time.fixedDeltaTime);
-
+        
+        // 등가속운동
+        // V = V0 + a * t
         g_velocity += gravityAcceleration * Time.fixedDeltaTime;
-
-        float g_H = (g_velocity * Time.fixedDeltaTime)
+        // S = V * t + 1/2 * a * t²
+        float g_S = (g_velocity * Time.fixedDeltaTime)
             + (0.5f * gravityAcceleration * Mathf.Pow(Time.fixedDeltaTime, 2));
 
         //중력가속도에 의한 y값 변경
-        transform.Translate(0, g_H, 0);
+        transform.Translate(0, g_S, 0);
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
