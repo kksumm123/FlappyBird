@@ -33,8 +33,11 @@ public class GameManager : MonoBehaviour
         score += addValue;
         scoreUI.text = "Score : " + score;
     }
+
+    int count;
     private void Update()
     {
+        
         if (isGameOver)
         {
             if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space))
