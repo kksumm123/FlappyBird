@@ -47,7 +47,6 @@ public class Bird : MonoBehaviour
 
     protected void OnDie(Collision2D collision)
     {
-        Debug.Log($"{collision}이랑 충돌해따");
         // 새 죽음
         // 게임 오버 UI
         GameManager.instace.SetGameOver();

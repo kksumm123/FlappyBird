@@ -5,14 +5,18 @@ using System.Text;
 using UnityEngine;
 
 /// <summary>
-/// 확장함수 샘플, 함수 이름은 중요하지 않음.
+/// 확장함수 샘플, 클래스 이름(MyExtension)은 중요하지 않음(마음대로 바꿔도됨, 파일이름과 달라도됨, 다른 클래스 이름과 중복되지만 않으면 됨)
 /// </summary>
 static public class MyExtension
 {
+    /// <summary>
+    /// 특정 방향에서 y축을 기준으로 회전한 방향 벡터 반환
+    /// </summary>
+    /// <param name="baseDirection">기준이 되는 벡터 ex)transform.forward</param>
+    /// <param name="angle">-180 ~ 180</param>
+    /// <returns></returns>
     static public Vector3 AngleToYDirection(this Vector3 baseDirection, float angle)
     {
-        // Euler = 평상시 쓰는 0 ~ 360도 각도
-        // quaternion = 유니티에서 쓰는 각도 = rotation
         var quaternion = Quaternion.Euler(0, angle, 0);
         Vector3 newDirection = quaternion * baseDirection;
 

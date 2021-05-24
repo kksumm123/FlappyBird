@@ -13,7 +13,7 @@ public class ColumnSpawner : MonoBehaviour
     {
         while (true)
         {
-
+            0
             // 스폰시키는 x값은 고정값
             // 배치할 때 y값은 랜덤
             Vector3 pos = new Vector3();

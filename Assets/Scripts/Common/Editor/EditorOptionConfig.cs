@@ -2,7 +2,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
-using System.Linq;
 
 
 public class EditorOptionConfig : EditorWindow
@@ -39,20 +38,5 @@ public class EditorOptionConfig : EditorWindow
             GUILayout.EndHorizontal();
         }
         GUILayout.EndScrollView();
-    }
-
-    void SetPositionObject()
-    {
-        List<GameObject> objs = new List<GameObject>();
-        foreach (var item in Selection.objects)
-        {
-            objs.Add(item as GameObject);
-        }
-        objs = objs.OrderBy(x => x.transform.position.x).ToList();
-
-        var spriteRenderer = objs[0].GetComponentInChildren<SpriteRenderer>();
-        float width = spriteRenderer.sprite.bounds.size.x * objs[0].transform.lossyScale.x;
-
-        var pos = objs[1].transform.position.x;
     }
 }

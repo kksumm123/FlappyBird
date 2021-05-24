@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CodePhyBird : Bird
 {
-    private void Start()
+    private new void Start()
     {
         base.Start();
 
@@ -30,7 +30,7 @@ public class CodePhyBird : Bird
     }
     void Flap()
     {
-        base.forceY = 0.07f;
+        base.forceY = 6f;
         //낙하중에 클릭시 조금만 띄워진다
         //낙하중 운동힘을 멈추고나서 힘을 줘야 항상 일정하게 띄워진다
         g_velocity = forceY;

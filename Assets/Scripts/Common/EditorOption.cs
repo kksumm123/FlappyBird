@@ -4,7 +4,6 @@ using UnityEngine;
 public enum OptionType
 {
     StartIndex = -1,
-    디버그_라인그리기,
     SuperPlayer,
     DisableEnemy,
     LastIndex
