@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    bool isGameOver = false;
+    public bool isGameOver = false;
     static public GameManager instace;
     Text highScoreText;
     // 최고 점수 저장, 게임 시작시 초기화, 게임 중 점수 넘기면 UI와 함께 갱신
