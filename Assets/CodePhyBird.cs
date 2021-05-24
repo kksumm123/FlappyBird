@@ -16,6 +16,9 @@ public class CodePhyBird : Bird
     public float g_velocity = 0;
     private void Update()
     {
+        if (Time.time < 0.5f)
+            return;
+        
         //성능차이에 따른 fps에 
         // 물리적인 계산 등 성능에 따라 결과가 달라지므로
         // FixedUpdate사용하자
@@ -23,12 +26,7 @@ public class CodePhyBird : Bird
 
         // 마우스 클릭, 스페이스바
         if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space))
-        {
-            if (Time.time > 0.5f)
-            {
                 Flap();
-            }
-        }
     }
     void Flap()
     {
@@ -50,10 +48,9 @@ public class CodePhyBird : Bird
         //중력에 의한 낙하 구현
         //중력가속도
         //g_velocity += gravityAcceleration * Time.fixedDeltaTime;
-        //g_velocity += (Mathf.Pow(gravityAcceleration * Time.fixedDeltaTime);
         
         // 등가속운동
-        // V = V0 + a * t
+        // V1 = V0 + a * t
         g_velocity += gravityAcceleration * Time.fixedDeltaTime;
         // S = V * t + 1/2 * a * t²
         float g_S = (g_velocity * Time.fixedDeltaTime)
